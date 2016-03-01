@@ -1,0 +1,38 @@
+{
+  "name": "kenode-blog-express",
+  "version": "1.0.0",
+  "description": "Kenode Blog Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenode/kenode-blog-express.git"
+  },
+  "keywords": [
+    "kenode",
+    "blog",
+    "express"
+  ],
+  "author": "thondery <thondery@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kenode/kenode-blog-express/issues"
+  },
+  "homepage": "https://github.com/kenode/kenode-blog-express#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "connect-redis": "^3.0.2",
+    "cookie-parser": "^1.4.1",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "lodash": "^4.5.1",
+    "log4js": "^0.6.32",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.5",
+    "swig": "^1.4.2"
+  }
+}
