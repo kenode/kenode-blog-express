@@ -1,0 +1,13 @@
+{
+  "server": "120.55.151.247:8080",
+  "appid": "您的应用ID",
+  "secret": "您的应用Secret",
+  "heartbeatInterval": 60,
+  "reconnectDelay": 10,
+  "reportInterval": 60,
+  "logdir": "alinode生产的日志放置的路径，与NODE_LOG_DIR路径保持一致。如：/tmp/",
+  "cmddir": "命令集路径，绝对路径，如：/Users/jacksontian/commands",
+  "error_log": [
+    "您的应用在业务层面产生的异常日志的路径，如：/root/.logs/error.#YYYY#-#MM#-#DD#.log"
+  ]
+}

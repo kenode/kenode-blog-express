@@ -83,7 +83,7 @@ else {
 var urlInfo = require('url').parse(config.host);
 config.hostname = urlInfo.hostname || config.host;
 if (!module.parent) {
-  app.listen(config.port, function () {
+  app.listen(config.port, config.hostname, function () {
     logger.info('Kenode Blog listening on port', config.port);
     logger.info('God bless love....');
     logger.info('You can debug your app with http://' + config.hostname + ':' + config.port);

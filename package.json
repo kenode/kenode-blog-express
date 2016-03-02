@@ -4,6 +4,8 @@
   "description": "Kenode Blog Express",
   "main": "index.js",
   "scripts": {
+    "start": "pm2 start app.js -i max -n \"kenode-blog-express\" --watch && pm2 save",
+    "delete": "pm2 stop kenode-blog-express && pm2 delete kenode-blog-express",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

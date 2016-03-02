@@ -6,7 +6,7 @@ module.exports = {
 	debug: true,
 
   // host
-  host: 'localhost',
+  host: '127.0.0.1',
 
   // 服务端口
   port: 3000,

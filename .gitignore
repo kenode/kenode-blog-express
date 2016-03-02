@@ -26,6 +26,8 @@ build/Release
 # Dependency directory
 node_modules
 .DS_Store
+config.js
+alinode.json
 
 # Optional npm cache directory
 .npm
