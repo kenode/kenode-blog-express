@@ -12,12 +12,14 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var compress = require('compression');
 var RedisStore = require('connect-redis')(session);
+var _ = require('lodash');
 
 var logger = require('./common/logger');
 var webRouter = require('./web_router');
 
 var app = express();
 var _basename = process.cwd();
+console.log(_basename);
 
 // logger
 app.use(log4js.connectLogger(logger, {
@@ -54,6 +56,10 @@ app.use(session({
   saveUninitialized: true
 }));
 
+// set static, dynamic helpers
+_.extend(app.locals, {
+  config: config
+});
 
 // static
 var staticDir = path.join(_basename, 'public');

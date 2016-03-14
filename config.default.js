@@ -6,10 +6,16 @@ module.exports = {
 	debug: true,
 
   // host
-  host: '127.0.0.1',
+  host: 'localhost',
+
+  // cdn host，如 http://cnodejs.qiniudn.com
+  site_static_host: '', // 静态文件存储域名
 
   // 服务端口
   port: 3000,
+
+  // 管理入口
+  manager: 'manager',
 
   // session secret
   session_secret: 'kenode_blog_secret',

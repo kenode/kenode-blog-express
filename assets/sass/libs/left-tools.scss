@@ -1,0 +1,95 @@
+//sass style
+//------------------------------------
+
+#left-tools {
+  flex: 0 0 $LEFTOOLS_NORMAL_WIDTH;
+  order: -1;
+  background-color: $LEFTOOLS_BACKGROUND_COLOR;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .list-group {
+    .list-group-item:first-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .list-group-item:last-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .list-group-item {
+      border: 0;
+      background-color: $LEFTOOLS_LINKVISITED_BG;
+      color: $LEFTOOLS_LINKVISITED_COLOR;
+      padding: 12px 15px;
+    }
+
+    .list-group-item:hover {
+      background-color: $LEFTOOLS_LINKHOVER_BG;
+      color: $LEFTOOLS_LINKHOVER_COLOR;
+      border: 0;
+    }
+
+    .list-group-item.active {
+      background-color: $LEFTOOLS_LINKACTIVE_BG; 
+    }
+
+    .tooltip {
+      font-size: 13px;
+      line-height: 180%;
+    }
+  }
+
+  #left-tools-plus {
+    margin-bottom: 0;
+
+    .list-group-item {
+      border: 0;
+      background-color: rgba(255, 255, 255, 0);
+      color: $LEFTOOLS_LINKACTIVE_COLOR;
+      padding: 12px 15px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0);
+        color: $LEFTOOLS_LINKHOVER_COLOR;
+        border: 0;
+      }
+    }
+
+    .list-group-item.active {
+      border: 0;
+      background-color: rgba(255, 255, 255, 0);
+      color: #999;
+      padding: 12px 15px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0);
+        color: #aaa;
+        border: 0;
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 0;
+    padding: 10px;
+
+    .btn-group {
+      margin: 10px 0;
+
+      .bootstrap-switch {
+        border: 0;
+        border-radius: 15px;
+      }
+    }
+
+    .form-control {
+      border-radius: 18px;
+    }
+  }
+}

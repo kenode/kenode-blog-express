@@ -1,0 +1,44 @@
+//sass style
+//------------------------------------
+
+$SCREEN_DESKTOP_WIDTH:              1132px;
+$SCREEN_HD_WIDTH:                   858px;
+$SCREEN_MOBILE_WIDTH:               418px;
+
+$APP_LEFT_DEPTH:                    3;
+$APP_WELL_DEPTH:                    1;
+$NAVBAR_TOP_DEPTH:                  2;
+$APP_WELL_BACKGROUND:               rgba(0, 0, 0, 0.15);
+$APP_WELL_DARK_BACKGROUND:          rgba(255, 255, 255, 0.15);
+$BODYER_NORMAL_BACKGROUND:          #fff;
+$BODYER_DARK_BACKGROUND:            #333;
+
+$LEFTOOLS_NORMAL_WIDTH:             12em;
+$LEFTOOLS_MINI_WIDTH:               3.5em;
+$SCREEN_NORMAL_WIDTH:               20em;
+
+$LEFTOOLS_BACKGROUND_COLOR:         #666;
+$LEFTOOLS_LINKVISITED_COLOR:        #eee;
+$LEFTOOLS_LINKHOVER_COLOR:          #eee;
+$LEFTOOLS_LINKACTIVE_COLOR:         #eee;
+$LEFTOOLS_LINKVISITED_BG:           #666;
+$LEFTOOLS_LINKHOVER_BG:             #999;
+$LEFTOOLS_LINKACTIVE_BG:            #337ab7;
+
+$NAVBAR_NORMAL_BACKGROUND:          #fff;
+$NAVBAR_NORMAL_BORDER:              #eee;
+$NAVBAR_LINKVISITED_COLOR:          #999;
+$NAVBAR_LINKHOVER_BACKGROUND:       #eee;
+$NAVBAR_LINKACTIVE_COLOR:           #666;
+$NAVBAR_LINKVISITED_BORDER:         #eee;
+$NAVBAR_LINKHOVER_BORDER:           #999;
+$NAVBAR_LINKACTIVE_BORDER:          #666;
+
+$NAVBAR_DARK_BORDER:                #666;
+$NAVBAR_DARK_BACKGROUND:            #333;
+$NAVBAR_DARK_LINKVISITED_COLOR:     #999;
+$NAVBAR_DARK_LINKHOVER_BACKGROUND:  #666;
+$NAVBAR_DARK_LINKACTIVE_COLOR:      #999;
+$NAVBAR_DARK_LINKVISITED_BORDER:    #666;
+$NAVBAR_DARK_LINKHOVER_BORDER:      #999;
+$NAVBAR_DARK_LINKACTIVE_BORDER:     #ccc;

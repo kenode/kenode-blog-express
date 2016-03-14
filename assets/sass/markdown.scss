@@ -1,0 +1,195 @@
+//sass style
+//------------------------------------
+
+$markdownFamily:         Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+$markdownSize:           13px;
+$markdownColor01:        #000;
+$markdownColor02:        #777777;
+$markdownColor03:        inherit;
+$markdownColor04:        #ccc;
+$markdownColor05:        #f8f8f8;
+$markdownColor06:        #0645ad;
+$markdownColor07:        #0b0080;
+$markdownColor08:        #06e;
+$markdownColor09:        #faa700;
+$markdownColor10:        rgba(255, 255, 0, 0.3);
+$markdownColor11:        #0645ad;
+$markdownColor12:        #666666;
+$markdownColor13:        #eee;
+$markdownFamily01:       'Consolas', 'Monaco', 'Andale Mono', 'monospace';
+
+.markdown {
+  font-family: $markdownFamily;
+  font-size: $markdownSize;
+  max-width: 855px;
+  text-align: left;
+  margin: 0 auto;
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 28px;
+    color: $markdownColor01;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: $markdownColor01;
+    border-bottom: 2px solid $markdownColor04;
+  }
+
+  h3 {
+    font-size: 18px;
+    border-bottom: 2px solid $markdownColor04;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 14px;
+    color: $markdownColor02;
+    background-color: $markdownColor03;
+  }
+
+  hr {
+    height: 0.2em;
+    border: 0;
+    color: $markdownColor04;
+    background-color: $markdownColor04;
+  }
+ 
+  p, blockquote, ul, ol, dl, li, table, pre {
+    margin: 15px 0;
+  }
+ 
+  p {
+    margin: 1em 0;
+  }
+ 
+  pre { 
+    background-color: $markdownColor05;    
+    border: 1px solid $markdownColor04;
+    border-radius: 3px;
+    overflow: auto;
+    padding: 5px;
+  }
+ 
+  pre code {
+    background-color: $markdownColor05;
+    border: none;    
+    padding: 0;
+  }
+ 
+  code {
+    font-family: $markdownFamily01;
+    background-color: $markdownColor05;
+    border: 1px solid $markdownColor04;
+    border-radius: 3px;
+    padding: 0 0.2em;
+    line-height: 1;
+  }
+ 
+  pre > code {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: $markdownColor06;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $markdownColor07;
+  }
+
+  a:hover {
+    color: $markdownColor08;
+  }
+
+  a:active {
+    color: $markdownColor09;
+  }
+
+  a:focus {
+    outline: thin dotted;
+  }
+
+  a:hover, a:active {
+    outline: 0;
+  }
+ 
+  ::-moz-selection {
+    background: $markdownColor10;
+    color: $markdownColor01;
+  }
+
+  ::selection {
+    background: $markdownColor10;
+    color: $markdownColor01;
+  }
+ 
+  a::-moz-selection {
+    background: $markdownColor10;
+    color: $markdownColor11;
+  }
+
+  a::selection {
+    background: $markdownColor10;
+    color: $markdownColor11;
+  }
+ 
+  blockquote {
+    color: $markdownColor12;
+    margin: 0;
+    padding-left: 3em;
+    border-left: 0.5em $markdownColor13 solid;
+  }
+ 
+  ul, ol {
+    margin: 1em 0;
+    padding: 0 0 0 2em;
+  }
+
+  li p:last-child {
+    margin: 0;
+  }
+
+  dd {
+    margin: 0 0 0 2em;
+  }
+ 
+  img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+    max-width: 100%;
+  }
+ 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  td {
+    vertical-align: top;
+  }
+
+}
+ 
+@media only screen and (min-width: 480px) {
+  .markdown { font-size: 14px; }
+}
+ 
+@media only screen and (min-width: 768px) {
+  .markdown { font-size: 16px; }
+}

@@ -1,0 +1,23 @@
+//sass style
+//------------------------------------
+
+$baseFontSize:   12px !default;
+
+body {
+  font-size: $baseFontSize;
+}
+
+.logo {
+  /* @meta {"spritesheet": {"include": false}} */
+  background-image: url("../img/logo.png");
+  width: 800px;
+  height: 280px;
+}
+
+.logo_cube {
+  background-image: url("../css-sprite/logo-blue-cube.png");
+}
+
+.logo_top {
+  background-image: url("../css-sprite/logo.png");
+}

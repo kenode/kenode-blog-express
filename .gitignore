@@ -25,9 +25,11 @@ build/Release
 
 # Dependency directory
 node_modules
+bower_components
 .DS_Store
 config.js
-alinode.json
+public
+logger
 
 # Optional npm cache directory
 .npm

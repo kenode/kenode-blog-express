@@ -1,0 +1,64 @@
+//sass style
+//------------------------------------
+
+
+.navbar-top {
+  position: fixed;
+  top: 0;
+  left: $LEFTOOLS_NORMAL_WIDTH + $SCREEN_NORMAL_WIDTH;
+  right: 0;
+  z-index: $NAVBAR_TOP_DEPTH;
+  background: $NAVBAR_NORMAL_BACKGROUND;
+  border-bottom: 2px $NAVBAR_NORMAL_BORDER solid;
+  height: 48px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  -webkit-transition:background 1.5s ease;
+  -moz-transition:background 1.5s ease;
+
+  .menu {
+    flex: 0;
+    order: -1;
+  }
+
+  .pp-group {
+    width: 100%;
+    height: 100%;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+      display: inline-block;
+      padding: 14px;
+      border-bottom: 2px $NAVBAR_LINKVISITED_BORDER solid;
+      color: $NAVBAR_LINKVISITED_COLOR;
+      text-decoration: none;
+
+      &:hover {
+        background: $NAVBAR_LINKHOVER_BACKGROUND;
+        border-bottom: 2px $NAVBAR_LINKHOVER_BORDER solid;
+      }
+
+      &.active {
+        border-bottom: 2px $NAVBAR_LINKACTIVE_BORDER solid;
+        color: $NAVBAR_LINKACTIVE_COLOR;
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 0;
+    margin-right: 10px;
+
+    .form-control {
+      border-radius: 18px;
+    }
+  }
+
+  #app-left {
+    display: none;
+  }
+}

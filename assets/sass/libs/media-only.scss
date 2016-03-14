@@ -1,0 +1,97 @@
+//sass style
+//------------------------------------
+
+/** desktop **/
+@media only screen and (max-width: $SCREEN_DESKTOP_WIDTH) {
+  #left-tools {
+    flex: 0 0 $LEFTOOLS_MINI_WIDTH;
+
+    .form-group {
+      display: none;
+    }
+
+    .list-group-item span:not(.glyphicon) {
+      display: none;
+    }
+
+    #left-tools-plus {
+      display: inline-block;
+    }
+  }
+  
+  .navbar-top {
+    left: $LEFTOOLS_MINI_WIDTH + $SCREEN_NORMAL_WIDTH;
+  }
+}
+
+/** hd **/
+@media only screen and (max-width: $SCREEN_HD_WIDTH) {
+  #screen {
+    flex: 0;
+  }
+
+  .navbar-top {
+    left: $LEFTOOLS_MINI_WIDTH;
+  }
+}
+
+/** mobile **/
+@media only screen and (max-width: $SCREEN_MOBILE_WIDTH) {
+  #bodyer {
+    padding: 10px 10px;
+  }
+
+  .navbar-top {
+    left: 0;
+
+    #app-left {
+      display: inline-block;
+    }
+
+    .menu {
+      flex: 0 0 3em;
+      order: -1;
+      display: block;
+    }
+
+    .form-group {
+      display: none;
+    }
+  }
+
+  #left-tools {
+    width: $LEFTOOLS_NORMAL_WIDTH;
+    position: fixed;
+    z-index: $APP_LEFT_DEPTH;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    left: -$LEFTOOLS_NORMAL_WIDTH;
+
+    .list-group-item span:not(.glyphicon) {
+      display: initial;
+    }
+
+    .form-group {
+      display: inline-block;
+      text-align: center;
+    }
+
+    #left-tools-plus {
+      display: none;
+    }
+  }
+
+  .app-left-move {
+    -webkit-transform:translate($LEFTOOLS_NORMAL_WIDTH, 0);
+    -moz-transform:translate($LEFTOOLS_NORMAL_WIDTH, 0);
+
+  }
+
+  .app-well {
+    display: inline-block;
+  }
+
+  #leftool-search {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,52 @@
+//sass style
+//------------------------------------
+
+html, body, #wraper {
+  height: 100%;
+}
+
+body {
+  background-color: $BODYER_NORMAL_BACKGROUND;
+  -webkit-transition:background 1.5s ease;
+  -moz-transition:background 1.5s ease;
+}
+
+#wraper {
+  widows: 100%;
+  display: flex;
+  flex: 1;
+}
+
+
+
+#bodyer {
+  width: 100%; 
+  padding: 10px 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 45px;
+}
+
+.app-well {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: $APP_WELL_DEPTH;
+  background: $APP_WELL_BACKGROUND;
+}
+
+.app-well, .app-well-hidden, #leftool-search, #left-tools-plus {
+  display: none;
+}
+
+
+
+/** 1132px **/
+
+
+
+
+
+
+
+
