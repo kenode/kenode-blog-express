@@ -15,7 +15,7 @@ exports.signInPage = function (req, res) {
   var cookies = cookie.parse(req.headers.cookie);
   res.render('login', {
     user: req.user,
-    cookies: cookies
+    cookies: cookies || {}
   });
 };
 
