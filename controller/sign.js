@@ -12,10 +12,10 @@ exports.signInPage = function (req, res) {
   if (req.user && req.route.path === '/signin') {
     return res.redirect('/');
   }
-  var cookies = cookie.parse(req.headers.cookie);
+  var cookies = cookie.parse(req.headers.cookie || '');
   res.render('login', {
     user: req.user,
-    cookies: cookies || {}
+    cookies: cookies
   });
 };
 
