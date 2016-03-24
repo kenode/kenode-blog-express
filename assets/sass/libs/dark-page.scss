@@ -37,6 +37,77 @@
   }
 
   .app-well {
-    background: $APP_WELL_DARK_BACKGROUND;
+    background-color: $APP_WELL_DARK_BACKGROUND;
+  }
+
+  #blog-list {
+
+    h4 {
+
+      a {
+
+        &:hover {
+          color: #999;
+        }
+      }
+    }
+      
+  }
+
+  .login-page {
+
+    h1 {
+
+      div {
+        background: url('../img/logo-200.png');
+      }
+    }
+
+
+
+    .title {
+      border-bottom: 1px solid #666;
+
+      span {
+        background: #333;
+
+
+        a {
+          color: #666;
+
+          &:hover {
+            color: #999;
+          }
+
+          &.active {
+            color: #b1b1b1;
+          }
+        }
+      }
+    }
+
+
+
+    .sign-in {
+
+      .input-group {
+
+        .input-group-addon {
+          background-color: #666;
+          border-color: #222;
+
+          i {
+            color: #b1b1b1;
+            text-shadow: 0 1px 0 #2f2f2f;
+          }
+        }
+
+        .form-control {
+          background-color: #666;
+          color: #b1b1b1;
+          border-color: #222;
+        }
+      }
+    }
   }
 }

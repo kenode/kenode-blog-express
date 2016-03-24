@@ -14,24 +14,30 @@ module.exports = {
     },
     list: {
     	js: [
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/bootstrap/dist/js/bootstrap.js',
-        'bower_components/bootstrap-switch/dist/js/bootstrap-switch.js'
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/bootstrap/dist/js/bootstrap.js',
+        'node_modules/bootstrap-switch/dist/js/bootstrap-switch.js',
+        'node_modules/jquery.cookie/jquery.cookie.js',
+        'node_modules/lodash/lodash.js',
+        'node_modules/react/dist/react.js',
+        'node_modules/react-dom/dist/react-dom.js',
+        'node_modules/classnames/index.js',
+        'node_modules/markdown-it/dist/markdown-it.js',
+        'node_modules/crypto-js/index.js'
       ],
       css: [
-        'bower_components/bootstrap/dist/css/bootstrap.css',
-        'bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css',
-        'bower_components/font-awesome/css/font-awesome.css'
+        'node_modules/bootstrap/dist/css/bootstrap.css',
+        'node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css',
+        'node_modules/font-awesome/css/font-awesome.css',
+        'node_modules/animate.css/animate.css'
       ],
       fonts: [
-        'bower_components/bootstrap/dist/fonts/*.+(eot|svg|ttf|woff|woff2)',
-        'bower_components/font-awesome/fonts/*.+(eot|svg|ttf|woff|woff2|otf)'
+        'node_modules/bootstrap/dist/fonts/*.+(eot|svg|ttf|woff|woff2)',
+        'node_modules/font-awesome/fonts/*.+(eot|svg|ttf|woff|woff2|otf)'
       ],
       copys: [
-        'bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
-        'bower_components/bootstrap/dist/css/bootstrap-theme.min.css.map',
-        'bower_components/html5shiv/dist/html5shiv.min.js',
-        'bower_components/respond/dest/respond.min.js'
+        'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
+        'node_modules/bootstrap/dist/css/bootstrap-theme.min.css.map',
       ]
     }
   },
@@ -51,12 +57,27 @@ module.exports = {
         svgoPlugins: [{removeViewBox: false}],
         optimizationLevel: 5,
         use: [pngquant()]
-      }
+      },
+      zoomSize: [
+        {
+          file: [
+            './assets/image/logo.png',
+            './assets/image/logo2.png'
+          ],
+          opts: {
+            width: 200
+          },
+          rename: {
+            suffix: '-200'
+          }
+        }
+      ]
     }
   },
   webpack: {
     entry: {
-      index: './assets/js/index.js'
+      index: './assets/js/index.js',
+      signin: './assets/js/signin.js'
     },
     resolve: {
       extensions: ['', '.js']
@@ -66,7 +87,11 @@ module.exports = {
       filename: '[name].min.js'
     },
     externals: {
-
+      'lodash': '_',
+      'react': 'React',
+      'react-dom': 'ReactDOM',
+      'crypto-js': 'CryptoJS',
+      'classnames': 'cNames'
     },
     module: {
       loaders: [

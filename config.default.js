@@ -15,7 +15,7 @@ module.exports = {
   port: 3000,
 
   // 管理入口
-  manager: 'manager',
+  manager: '/manager',
 
   // session secret
   session_secret: 'kenode_blog_secret',
@@ -37,6 +37,19 @@ module.exports = {
   	category: 'kenode_blog',
   	format: ':method :url :status',
   	level: 'auto'
+  },
+
+  // encrypt
+  encrypt: {
+    cipher: require('crypto-js').AES,
+    key: 'fx4eCXvQ'
+  },
+
+  // admin
+  admin: {
+    username: 'admin',
+    password: '123456',
+    email: 'admin@xxx.com'
   }
   
 };

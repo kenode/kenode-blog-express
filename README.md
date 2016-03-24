@@ -1,128 +1,34 @@
-# Kenode Blog
+# Kenode Blog Express
 
-## `PM2` 开机自启动
+------
 
-生成启动脚本
-```bash
-$ pm2 startup centos
-```
+一个基于 __Node.js__ 的博客实践
 
-赋予权限
-```bash
-$ chmod +x /etc/init.d/pm2-init.sh
-```
+## 运用的技术
 
-加入启动项
-```bash
-chkconfig --add pm2-init.sh
-```
+### 1. 后端
 
-重启服务器，执行
-```bash
-$ pm2 resurrect
-```
+> * express 4.x  -- 基础框架
+> * mongodb -- NoSql数据库
+> * redis -- 缓存数据
+> * swig -- 模版引擎
+> * log4js -- 日志处理
+> * bluebird -- 异步流程控制库，基于Promises/A+
 
-命令集
-```bash
-$ service pm2-init.sh {start|stop|status|restart|reload|force-reload}
-```
+### 2. 前端
 
-## `Nginx` 代理
+> * jquery -- 运用最广泛的Javascript库
+> * bootstrap 3.x -- 可视化布局视图框架
+> * react -- 来自Facebook的组件化开发框架
+> * lodash -- javscript工具库
 
-添加 `nginx` 配置
-```conf
-server
-{
-	listen       80;
-	server_name: xxx.com;
-	index        index.html index.htm default.html default.htm;
-	root         /srv/nodejs/kenode-blog-express/public;
-	location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
-	{
-		expires          30d;
-	}
-	location ~ .*\.(js|css)$
-	{
-		expires          12h;
-	}
-	location / {
-		proxy_pass       http://127.0.0.1:3000;
-	}
-}
-```
+### 3. 开发编译
 
+> * gulp -- 自动化构建工具
+> * webpack -- 模块加载打包工具
+> * babel -- ES6转换ES5工具
+> * sass -- css预编译器
 
-## 部署 `alinode`
+## License
 
-安装 `tnvm`
-```bash
-$ cd ~ && wget -qO- https://raw.githubusercontent.com/aliyun-node/tnvm/master/install.sh | bash
-```
-
-为 `tnvm` 添加环境变量
-```bash
-$ source ~/.bashrc
-```
-
-查看 `alinode`
-```bash
-$ tnvm ls-remote alinode
-```
-
-安装 `alinode` 的一个版本
-```bash
-$ tnvm install alinod-v1.5.0
-```
-
-使用`alinode` 的一个版本
-```bash
-$ tnvm use alinod-v1.5.0
-```
-
-查看是否为 `alinode` 的版本
-```bash
-$ node -p 'process.alinode'
-```
-
-编辑 `~/.bashrc`
-```bash
-$ vi ~/.bashrc
-```
-
-添加两个环境变量
-```
-export ENABLE_NODE_LOG=YES
-export NODE_LOG_DIR=/tmp/
-```
-
-安装命令集
-```bash
-$ cd /srv/alinode && git clone https://github.com/aliyun-node/commands.git
-```
-
-部署 `AgentX`
-```bash
-$ npm install agentx -g
-```
-
-编辑 `./alinode.json`
-```json
-{
-  "server": "120.55.151.247:8080",
-  "appid": "您的应用ID",
-  "secret": "您的应用Secret",
-  "heartbeatInterval": 60,
-  "reconnectDelay": 10,
-  "reportInterval": 60,
-  "logdir": "/tmp/",
-  "cmddir": "/srv/alinode/commands",
-  "error_log": [
-    "/root/.logs/error.#YYYY#-#MM#-#DD#.log"
-  ]
-}
-```
-
-启动 `Afentx`
-```bash
-$ nohup agentx /srv/nodejs/kenode-blog-express/alinode.json &
-```
+The MIT License (MIT).

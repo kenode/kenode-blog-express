@@ -1,0 +1,24 @@
+//sass style
+//------------------------------------
+
+
+.navbar-top {
+  left: $LEFTOOLS_NORMAL_WIDTH;
+  max-width: 100%; 
+}
+
+/** desktop **/
+@media only screen and (max-width: $SCREEN_DESKTOP_WIDTH) {
+  .navbar-top {
+    left: $LEFTOOLS_MINI_WIDTH;
+  }
+}
+
+
+
+/** mobile **/
+@media only screen and (max-width: $SCREEN_MOBILE_WIDTH) {
+  .navbar-top {
+    left: 0;
+  }
+}

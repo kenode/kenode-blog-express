@@ -12,14 +12,17 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var compress = require('compression');
 var RedisStore = require('connect-redis')(session);
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 var _ = require('lodash');
-
 var logger = require('./common/logger');
+require('./middlewares/mongoose_log'); // 打印 mongodb 查询日志
+require('./models');
+var cors = require('cors');
 var webRouter = require('./web_router');
 
 var app = express();
 var _basename = process.cwd();
-console.log(_basename);
 
 // logger
 app.use(log4js.connectLogger(logger, {
@@ -55,6 +58,28 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+
+// oauth
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser(function (user, done) {
+  done(null, user);
+});
+passport.deserializeUser(function (user, done) {
+  done(null, user);
+});
+passport.use('local', new LocalStrategy({
+    usernameField: 'username',
+    passwordField: 'password'
+  },
+  function (username, password, done) {
+    require('./proxy').User.localStrategy({
+      username: username,
+      password: password
+    }, done);
+  })
+);
 
 // set static, dynamic helpers
 _.extend(app.locals, {

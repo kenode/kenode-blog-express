@@ -28,8 +28,9 @@
       flex: 1;
 
       .wrap-img {
-        flex: 0 0 5em;
+        flex: 0 0 6em;
         order: 1;
+
         img {
           width: 80px;
           height: 80px;
@@ -41,6 +42,7 @@
         width: 100%;
         h4 {
           line-height: 150%;
+          font-weight: bold;
         }
         .list-top, .list-foot {
           color: #999;

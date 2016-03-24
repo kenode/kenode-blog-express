@@ -1,0 +1,92 @@
+//sass style
+//------------------------------------
+
+.login-page {
+  padding: 125px 0 50px;
+  text-align: center;
+  margin: auto;
+  max-width: 748px;
+
+  h1 {
+
+    div {
+      margin: 0 auto;
+      width: 200px;
+      height: 70px;
+      display: block;
+      background: url('../img/logo2-200.png');
+      -webkit-transition:background 1.5s ease;
+      -moz-transition:background 1.5s ease;
+    }
+  }
+
+  h3 {
+    color: #d87401;
+    font-weight: bold;
+  }
+
+  .title {
+    margin: 70px auto 50px;
+    border-bottom: 1px solid #eeeeee;
+    color: #b1b1b1;
+    margin-top: 40px;
+
+    span {
+      position: relative;
+      top: 10px;
+      padding: 0 30px;
+      background: white;
+      -webkit-transition:background 1.5s ease;
+      -moz-transition:background 1.5s ease;
+
+      a {
+        color: #b1b1b1;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: #666;
+        }
+
+        &.active {
+          color: #333;
+        }
+      }
+    }
+  }
+
+  .sign-in {
+
+    .input-group {
+      padding: 5px 20px;
+      max-width: 380px;
+      margin: auto;
+
+      .input-group-addon {
+        background-color: #fff;
+      }
+
+      .form-control {
+        height: 42px;
+      }
+
+      .btn {
+        border-radius: 4px;
+        -webkit-transition:all 1.5s ease;
+        -moz-transition:all 1.5s ease;
+      }
+    }
+
+    .btn-group {
+      margin-top: 8px;
+      max-width: 340px;
+      display: block;
+    }
+    
+    @-moz-document url-prefix(){
+      .btn-group { 
+        max-width: 380px;
+      }
+    } /* 仅firefox 识别 */
+  }
+}

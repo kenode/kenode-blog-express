@@ -1,6 +1,24 @@
 {% extends 'layout.html' %}
 
 {% block title %}Kenode Blog{% endblock %}
+{% block style %}index{% endblock %}
+{% block entry %}index{% endblock %}
+
+{% block left-tools %}
+{% include 'left-tools.html' %}
+{% endblock %}
+
+{% block screen %}
+{% set screen_foo = {
+     background: '/img/6YxPs9jXumuuY4EAsAA1.jpg'
+   } 
+%}
+{% include 'screen.html' with screen_foo %}
+{% endblock %}
+
+{% block navbar_top %}
+{% include 'navbar_top.html' %}
+{% endblock %}
 
 {% block bodyer %}
       <div id="blog-list">

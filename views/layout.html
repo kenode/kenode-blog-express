@@ -6,88 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}My Title{% endblock %}</title>
   <!-- Styles -->
-  <link href="./css/vendor.min.css" rel="stylesheet">
-  <link href="./css/index.min.css" rel="stylesheet">
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="js/html5shiv.min.js"></script>
-    <script src="js/respond.min.js"></script>
-  <![endif]-->
+  <link href="/css/vendor.min.css" rel="stylesheet">
+  <link href="/css/{% block style %}index{% endblock %}.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="navbar-top">
-    
-    <div class="menu">
-      <a href="#" class="btn btn-default" id="app-left">
-        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"> </span>
-      </a>
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" id="navbar-search" placeholder="搜索">
-    </div>
-    <div class="pp-group">
-      <a href="#" class="active">发现</a>
-      <a href="#">时光机</a>
-      <a href="#">2015精选</a>
-    </div>
-    
-  </div>
+<body{% if cookies.display_mode == 'dark' %} class="dark-page"{% endif %}>
+  {% block navbar_top %}{% endblock %}
   <div id="wraper">
-    <div  id="well" class="app-well-hidden"></div>
-    <div id="left-tools" class="app-left">
-      <div class="list-group">
-        <a href="#" class="list-group-item active" data-toggle="tooltip" data-placement="right" title="首页">
-          <span class="glyphicon glyphicon-home" aria-hidden="true"> </span>
-          <span>首页</span>
-        </a>
-        <a href="#" class="list-group-item" data-toggle="tooltip" data-placement="right" title="专题">
-          <span class="glyphicon glyphicon-th" aria-hidden="true"> </span>
-          <span>专题</span>
-        </a>
-      </div>
-      <div class="list-group" id="left-tools-plus">
-        <a href="#" class="list-group-item">
-          <i class="fa fa-lightbulb-o fa-2x"></i>
-        </a>
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="leftool-search" placeholder="搜索">
-        <div class="btn-group" data-toggle="buttons">
-          <input type="checkbox" 
-                 name="deng-checkbox"  
-                 data-off-color="success"
-                 data-on-text="开"
-                 data-off-text="关"
-                 data-label-text="&lt;b&gt;灯&lt;/&gt;" 
-                 data-handle-width="50" 
-                 class="form-control" 
-                 />
-        </div>
-      </div>
-    </div>
-    <div id="screen" style="background-image: url('../img/6YxPs9jXumuuY4EAsAA1.jpg');">
-      <div class="bottom-block">
-      
-        <h1><img src="./img/logo.png" /></h1>
-
-        <h3>交流故事，沟通想法</h3>
-        <p>一个基于简书风格的个人博客</p>
-
-      </div>
-      <div class="img-info">
-        <i class="fa fa-info"></i>
-        <div class="info">
-           Powered by <a target="_blank" href="http://www.thondery.com/">Thondery</a>
-        </div>
-      </div>
-    </div>
+    <div id="message" class="alert alert-danger animated fadeOutUp" role="alert">...</div>
+    <div id="well" class="app-well-hidden"></div>
+    {% block left-tools %}{% endblock %}
+    {% block screen %}{% endblock %}
     <div id="bodyer">
       {% block bodyer %}{% endblock %}
     </div>
   </div>
-  <script src="./js/vendor.min.js"></script>
-  <script src="./js/index.min.js"></script>
+  <script src="/js/vendor.min.js"></script>
+  <script src="/js/{% block entry %}index{% endblock %}.min.js"></script>
 </body>
 </html>

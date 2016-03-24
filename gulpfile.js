@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var minifyCss = require('gulp-minify-css');
 var sprite = require('gulp-css-spriter');
+var imageSize = require('gulp-image-resize');
 var del = require('del');
 var runSequence = require('run-sequence').use(gulp);
 
@@ -78,6 +79,16 @@ gulp.task('assets-sass', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
+// assets-imgsize
+gulp.task('assets-imgsize', function () {
+  config.assets.image.zoomSize.map( function (item) {
+    gulp.src(item.file)
+      .pipe(imageSize(item.opts))
+      .pipe($.rename(item.rename))
+      .pipe(gulp.dest('./public/img'));
+  });
+});
+
 // assets-img
 gulp.task('assets-img', function () {
   return gulp.src(config.assets.image.file)
@@ -94,7 +105,7 @@ gulp.task('assets-js', function () {
 
 // assets
 gulp.task('assets', function () {
-  runSequence(['assets-sass', 'assets-img'], 'assets-js');
+  runSequence(['assets-sass', 'assets-imgsize', 'assets-img'], 'assets-js');
 });
 
 // build

@@ -22,6 +22,10 @@
   .navbar-top {
     left: $LEFTOOLS_MINI_WIDTH + $SCREEN_NORMAL_WIDTH;
   }
+  
+  #message {
+    left: $LEFTOOLS_MINI_WIDTH;
+  }
 }
 
 /** hd **/
@@ -32,6 +36,12 @@
 
   .navbar-top {
     left: $LEFTOOLS_MINI_WIDTH;
+  }
+
+  #message {
+    left: $LEFTOOLS_MINI_WIDTH;
+    width: 80%;
+    max-width: 500px;
   }
 }
 
@@ -76,9 +86,7 @@
       text-align: center;
     }
 
-    #left-tools-plus {
-      display: none;
-    }
+    
   }
 
   .app-left-move {
@@ -93,5 +101,18 @@
 
   #leftool-search {
     display: inline-block;
+  }
+
+  .login-page {
+    padding-top: 65px;
+
+    .title {
+      margin-top: 20px;
+    }
+  }
+
+  #message {
+    width: 80%;
+    left: 0;
   }
 }

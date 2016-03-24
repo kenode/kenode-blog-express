@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block title %}Kenode Blog{% endblock %}
+{% block style %}login{% endblock %}
+{% block entry %}signin{% endblock %}
+
+{% block left-tools %}
+{% include 'left-tools.html' %}
+{% endblock %}
+
+{% block screen %}{% endblock %}
+
+{% block navbar_top %}
+{% include 'navbar_top.html' %}
+{% endblock %}
+
+{% block bodyer %}
+      <div class="login-page">
+        <h1><div class="logo" /></h1>
+        <h3>交流故事，沟通想法</h3>
+        <h4 class="title">
+          <span>
+            <a class="active" href="/signin">登录</a>
+            <b>·</b>
+            <a class="" href="/signup">注册</a>
+          </span>
+        </h4>
+        <div id="container">
+          <div class="sign-in">
+            <form class="form-horizontal" method="post">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                <input class="form-control" type="text" name="username" placeholder="用户名/电子邮件">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                <input class="form-control" type="password" name="password" placeholder="密码">
+              </div>
+              <div class="input-group btn-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" data-loading-text="验证中...">登录</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+{% endblock %}
